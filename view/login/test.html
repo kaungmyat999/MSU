@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Image</h1>
+    <input type="file" name="file1" id='file1'>
+    <form action="/test" method="post" enctype="multipart/form-data">
+        <input type="file" name="file2" id="file2">
+        <button type="submit">Upload</button>
+
+    </form>
+<script>
+    let file1 =document.getElementById('file1');
+    file1.addEventListener('change',(event)=>{
+        console.log("Changing");
+        let file2 = document.getElementById('file2');
+
+        console.log(event);
+        file2.files =event.target.files;
+    })
+</script>
+<!--     
+    <form action="/img" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image"  id='file_img'/>
+        <input type="text" name="encoded_image" id="encoded_image" hidden>
+        <button type="submit">Upload</button>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h6>Image Preview:</h6>
+                <img class="img" id="avatar" />
+            </div>
+            <div class="col">
+                <h6>Base64 Output</h6>
+                <textarea id="textArea" rows="30" cols="50"></textarea>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <form action="/img" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" />
+        <button type="submit">Upload</button>
+    </form> -->
+    <script>
+        // let file = document.getElementById('file_img');
+        // let btn = document.getElementById('btn');
+        // let avatar = document.getElementById('avatar');
+        // let textArea = document.getElementById('textArea')
+        // let encoded_image = document.getElementById('encoded_image')
+        // file.addEventListener('change',async(event)=>{
+
+        //     const reader = await new FileReader();
+        //     console.log(file.files[0]);
+        //     await reader.readAsBinaryString(file.files[0]);
+
+        //     reader.onload=async()=>{
+        //         let base64 =  await reader.result 
+        //         avatar.src ='data:image/jpeg;base64,'+ btoa(base64);
+        //         textArea.innerText = await base64;
+        //         console.log(reader.result);
+        //         encoded_image.value = base64;
+
+        //         await fetch('http://localhost:3000/img',{
+        //             method:"POST",
+        //             headers: {
+        //                 'Accept': 'application/json',
+        //                 'Content-Type': 'application/json'
+        //             },
+        //             body:JSON.stringify({base64}) 
+        //         })
+        //     }
+
+            
+            
+        // } )
+
+    
+
+        
+        //     let photo  = document.getElementById('file_img').files[0];
+        //     let formData = new FormData();
+     
+        //     formData.append("photo", photo);
+        //     console.log(formData );
+        //     fetch('http://localhost:3000/img',{
+        //         method:"POST",
+        //         headers: {
+        //             'Accept': 'application/json',
+        //             'Content-Type': 'application/json'
+        //         },
+        //     body:formData
+            
+        // })
+
+    </script>
+</body>
+</html>

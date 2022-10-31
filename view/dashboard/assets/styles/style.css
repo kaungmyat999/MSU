@@ -1,0 +1,72 @@
+#tokenInput{
+    width: 250%;
+}
+.fin-input{
+    width: 100%;
+}
+@media only screen and (max-width: 576px) {
+    #tokenInput{
+        width: 100%;
+    }
+
+    .containerr{
+        padding-left: 50px;
+    }
+    
+    .fin-input{
+        width: 100%;
+    }
+
+    #uploadBtn{
+        padding-left:  30px;
+        padding-right: 30px;
+    }
+    
+    
+}
+#uploadBtn{
+    margin-top: 1.5rem;
+    margin-right: 48px;
+    margin-left: 0;
+    
+    background-color:    #007bff;
+    border: 0.2px solid #0263ca;
+}
+/* margin-left:0;
+    padding-left:92.5px;
+    padding-right:100px; */
+#uploadBtn:hover{
+    background-color: #0069d9;;
+    border-color: #0062cc;
+    
+}
+
+#msu_title_logo{
+    max-height: 100%;
+    vertical-align: -30px;
+    display: inline-block;
+}
+.form-group {
+    margin-bottom: 1rem;
+  }
+
+.form-control:focus{
+    box-shadow: 0px 0px 0.1px 4.2px rgba(112, 177, 238, 0.76);
+}
+.form-control2{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.apex_chart{
+    
+}

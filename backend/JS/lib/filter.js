@@ -1,0 +1,2 @@
+const falsy_value_filter_from_array = (input) => (typeof(input)== 'object') ? (input.filter((word)=> ((typeof(word) != "number") ? word.length > 0 : word))) : (input);
+module.exports = falsy_value_filter_from_array;

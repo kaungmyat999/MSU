@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html/test.css" type="text/css">
+    <link
+    href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <div class="container">
+        <div id="wrapper"></div>
+    </div>
+
+    <style>
+        
+    </style>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script src="src/index.js"></script>
+    <script>
+        new gridjs.Grid({
+            columns: ["Name", "Email", "Phone Number","Phone Number"],
+            resizeable:true,    
+            autoWidth:true,
+            data: [
+                ["John", "john@example.com","(353) 01 222 3333", "(353) 01 222 3333"],
+                ["Mark", "mark@gmail.com","(353) 01 222 3333", "(01) 22 888 4444"],
+                ["Eoin", "eoin@gmail.com","(353) 01 222 3333", "0097 22 654 00033"],
+                ["Sarah", "sarahcdd@gmail.com","(353) 01 222 3333", "+322 876 1233"],
+                ["Afshin", "afshin@mail.com","(353) 01 222 3333", "(353) 22 87 8356"]
+            ],
+            style:{
+                headers:{
+                    'margin-right' : '20px'
+                },
+                th:{
+                    width : '100%',
+                    border: '1px solid #ccc'
+                },
+                td:{
+                    height: '12px',
+                    padding:'16px',
+                    paddingLeft: '80px',
+                    paddingRight:'80px',    
+                }
+            }
+            }).render(document.getElementById("wrapper"));
+    </script>
+</body>
+</html>

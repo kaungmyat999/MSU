@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Buhid&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Noto+Sans+Buhid&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: aliceblue;
+
+}
+
+.containerr{
+    min-height: 530px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 8%;    
+}
+.items:first-child{
+}
+.items{
+
+    min-width: 280px;
+    align-items:flex-start;
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+
+#button-row{
+    
+    margin: 4rem 7.2rem 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+
+button{
+    padding: 10px 32px 10px 32px;
+    border-radius: 0.3rem;
+    color:white;
+}
+#approve{
+    margin-right: 70px;
+    background-color:    #007bff;
+    border: 0.2px solid #0263ca;
+}
+#approve:hover{
+    background-color: #0069d9;;
+    border-color: #0062cc;
+}
+#reject{
+    background-color: rgb(255, 49, 49);
+    border: 0.2px solid rgba(219, 7, 7, 0.72);
+}
+
+#reject:hover{
+    background-color: rgb(255, 36, 0);
+}
+
+
+/* Text */
+
+h3{
+    margin-bottom: 8px;
+    font-family: 'Amaranth', sans-serif;
+}
+
+p{
+    font-family: 'Noto Sans Buhid', sans-serif;
+}
+.img{
+    width: 280px;
+    margin: 1.2rem 0 1.1rem 0;
+}
+#candidate_img{
+    border-radius: 6.7% ;
+}

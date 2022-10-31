@@ -1,0 +1,6 @@
+id,fullName,email,password,phone_no,gender,college,position,status,img,isAdmin,createdAt,updatedAt
+1,user_5,user5@gmail.com,$2b$10$to1zQDAdLUvbwCyqk1eNj.mBibjP2w6WBQRXvy4jog11EbQnJ3Sk2,6696498887,Male,De Anza,DeAnza,Member,[object Object],false,2022-10-24T00:22:18.000Z,2022-10-29T22:03:32.000Z
+3,user8,user8@gmail.com,$2b$10$DG9B42HSqXHtdAhdQVuwy.ZpSQ.Lp33N19AA1kWyO5b7HYAfhhjVO,6696498887,Female,Skyline,Faculty,Member,[object Object],false,2022-10-29T06:11:55.000Z,2022-10-29T07:03:19.000Z
+4,user6,user6@gmail.com,$2b$10$rk6rNXalYqU9HpSwxYimiuTKnYHgrJ8d9blwJ3usQ1eeO9dmZaO1W,7083234609,Male,Skyline,Student,Member,[object Object],true,2022-10-29T06:59:16.000Z,2022-10-29T07:03:08.000Z
+7,user10,user10@gmail.com,$2b$10$JhPRfx7yQJ90NHGx8ZNCv.TEqkKWQnpxuimqdfG/zdhASYKXOn0j2,6696498887,Male,DeAnza,Community Member,Pending,[object Object],false,2022-10-30T00:52:48.000Z,2022-10-30T00:52:48.000Z
+8,user11,user11@gmail.com,$2b$10$OQQsDP2V5FBcLRHOjEOxJ.OaW2/Gj5byEmpGo4b/cFDe/uPmjpG3a,6696498887,Male,DeAnza,Administration,Pending,[object Object],false,2022-10-30T00:54:51.000Z,2022-10-30T00:54:51.000Z

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Potenza - Job Application Form Wizard with Resume upload and Branch feature">
+    <meta name="author" content="Ansonika">
+    <title>Potenza | Job Application Form Wizard by Ansonika</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<nav>
+		<ul class="cd-primary-nav">
+			<li><a href="/signup" class="animated_link">Sign up</a></li>
+			<li><a href="/login" class="animated_link">Log In</a></li>
+			
+		</ul>
+	</nav>
+	<!-- /menu -->
+	
+	<div class="container-fluid">
+	    <div class="row row-height">
+	        <div class="col-xl-4 col-lg-4 content-left">
+	            <div class="content-left-wrapper">
+	                <a href="index.html" id="logo"><img src="img/msu_logo1.svg" alt="" width="75" height="60"></a>
+	                <div id="social">
+	                    <ul>
+	                        <li><a href="https://www.facebook.com/myanmarstudentunion"><i class="icon-facebook"></i></a></li>
+	                        <li><a href="https://instagram.com/msu_skyline"><i class="icon-instagram"></i></a></li>
+	                        <li><a href="mailto:msu.skylinecollege@gmail.com"><i class="icon-mail"></i></a></li>
+	                    </ul>
+	                </div>
+	                <!-- /social -->
+	                <div>
+	                    <figure><img src="img/info_graphic_1.svg" alt="" class="img-fluid" width="270" height="270"></figure>
+	                    <h2>Join With Us Today!</h2>
+	                    <p>The MSU-SC is organized to represent Myanmar culture and traditions at Skyline College and create a just society to promote social relations and provide resources in different sectors. MSU carries the legacy and historical task of advancing the liberation of Myanmar</p>
+	                    <p id="small_txt">Already Have An Account?</p>
+						<a href="/login" class="btn_1 rounded yellow" >Log In</a>
+	                    <a href="#start" class="btn_1 rounded mobile_btn yellow">Start Now!</a>
+	                </div>
+	                <div class="copy"  ><span class="fade-block">© 2022 CopyRight All Reserved, Built by with</span> <span style="opacity: 1;color:red;">&#10084</span> <span class="fade-block">by Kaung Myat</span></div>
+	            </div>
+	            <!-- /content-left-wrapper -->
+	        </div>
+	        <!-- /content-left -->
+	        <div class="col-xl-8 col-lg-8 content-right" id="start" style="height: 960px;">
+	            <form action="http://localhost:3000/test" method="post" enctype="multipart/form-data">
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<span id="location"></span>
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form id="wrapped" method="post" enctype="multipart/form-data">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+								<div class="step">
+									<h2 class="section_title">Interest Form</h2>
+									<h3 class="main_question">Myanmar Studnet Union</h3>
+									<div class="form-group add_top_30">
+										<label for="name">Full Name</label>
+										<input type="text" name="fullName" id="fullName" class="form-control input required detect" >
+									</div>
+									<div class="form-group">
+										<label for="email">Email Address</label>
+										<input type="email" name="email" id="email" class="form-control input detect required" onchange="getVals(this, 'email_field');">
+									</div>
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input type="password" name="password" id="password" class="form-control input  detect required">
+									</div>
+									<div class="form-group">
+										<label for="phone">Phone</label>
+										<input type="number" name="phone" id="phone" class="form-control input detect required">
+									</div>
+									<label>Gender</label>
+									<input type="text" name="gender" id="gender_hd" class="detect input" hidden>
+									<div class="form-group  radio_input">
+										<label class="container_radio mr-3">Male
+											<input type="radio" name="gender" value="Male" class="gender required">
+											<span class="checkmark" ></span>
+										</label>
+										<label class="container_radio">Female
+											<input type="radio" name="gender" value="Female" class="gender required">
+											<span class="checkmark"></span>
+										</label>
+	
+										<label class="container_radio">Other
+											<input type="radio" name="gender" value="Female" class="required" id="other1" >
+											<span class="checkmark"></span>
+										</label>
+										<div class="form-group add_top_30" id="input_form1">
+											<label for="name">Please Describe Your Gender</label>
+											<input type="text" name="gender" id="gender_input" class="other-gender form-control">
+										</div>
+									</div>
+									<div class="form-group add_bottom_30 add_top_20">
+										<label>Upload Photo<br><small>(File accepted: .pdf, .png,.jpeg - Max file size: 150KB for demo limit)</small></label>
+										<!-- <div class="file_upload">
+											<input type="file" name="file_upload" accept=".pdf,image/*" class="required" id="file">
+											<span for="fileupload" class="error" id="file_error">File cannot be larger than 150KB.</span>
+										</div> -->
+										<div class="fileupload_">
+											<input type="file" name="img" accept=".pdf,.png,.jpeg" class="required error detect" id="image_file">
+											<span for="fileupload_" class="error" id="file_error" style="display: none;">File cannot be larger than 150KB.</span>
+										</div>
+									</div>
+								</div>
+								<!-- /step-->
+	
+								<!-- /Start Branch ============================== -->
+								<div class="step" data-state="branchtype">
+									<h2 class="section_title">College</h2>
+									<h3 class="main_question">Enter your college</h3>
+									<label>College</label>
+									<input type="text" name="college" id="hd_college" class='input' hidden>
+									<div class="form-group2">
+										<label class="container_radio version_2">Skyline
+											<input type="radio" name="college" value="Skyline" class="college required">
+											<span class="checkmark college_cm"></span>
+	
+										</label>
+										<label class="container_radio version_2">De Anza
+											<input type="radio" name="college" value="DeAnza"  class="college">
+											<span class="checkmark college_cm"></span>
+										</label>
+										<label class="container_radio version_2">Other
+											<input type="radio" name="college" class="college required" id="other2" value="Other">
+											<span class="checkmark college_cm"></span>
+										</label>
+										<div class="form-group add_top_30" id="input_form2">
+											<label for="name">Please Describe Your Gender</label>
+											<input type="text" name="college" id="other_college_input" class="form-control" >
+										</div>
+									</div>
+	
+									
+								</div>
+								<input type="text" name="position" id="hd_position" class='input' hidden>
+								<div class="branch" id="Skyline">
+									<div class="step" data-state="end">
+										<h2 class="section_title">Position</h2>
+										<h3 class="main_question">Please Enter Your Role</h3>
+										<label class="newly-added-label">Position</label>
+										<div class="form-group2">
+											<label class="container_radio version_2">Student
+												<input type="radio" name="position" value="Student" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Faculty
+												<input type="radio" name="position" value="Faculty" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Staff
+												<input type="radio" name="position" value="Staff" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Administration
+												<input type="radio" name="position" value="Administration" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Community Member
+												<input type="radio" name="position" value="Community Member" class="position required">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="branch" id="DeAnza">
+									<div class="step" data-state="end">
+										<h2 class="section_title">Position</h2>
+										<h3 class="main_question">Please Enter Your Role</h3>
+										<label class="newly-added-label">Position</label>
+										<div class="form-group2">
+											<label class="container_radio version_2">Student
+												<input type="radio" name="position" value="Student" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Faculty
+												<input type="radio" name="position" value="Faculty" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Staff
+												<input type="radio" name="position" value="Staff" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Administration
+												<input type="radio" name="position" value="Administration" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Community Member
+												<input type="radio" name="position" value="Community Member" class="position required">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="branch" id="DeAnza">
+									<div class="step" data-state="end">
+										<h2 class="section_title">Position</h2>
+										<h3 class="main_question">Please Enter Your Role</h3>
+										<label class="newly-added-label">Position</label>
+										<div class="form-group2">
+											<label class="container_radio version_2">Student
+												<input type="radio" name="position" value="Student" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Faculty
+												<input type="radio" name="position" value="Faculty" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Staff
+												<input type="radio" name="position" value="Staff" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Administration
+												<input type="radio" name="position" value="Administration" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Community Member
+												<input type="radio" name="position" value="Community Member" class="position required">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- /Work position > Freelance-Contract ============================== -->
+								<div class="branch" id="Other">
+									<div class="step" data-state="end">
+										<h2 class="section_title">Position</h2>
+										<h3 class="main_question">Please Enter Your Role</h3>
+										<label class="newly-added-label">Position</label>
+										<div class="form-group2">
+											<label class="container_radio version_2">Student
+												<input type="radio" name="position" value="Student" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Faculty
+												<input type="radio" name="position" value="Faculty" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Staff
+												<input type="radio" name="position" value="Staff" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Administration
+												<input type="radio" name="position" value="Administration" class="position required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio version_2">Community Member
+												<input type="radio" name="position" value="Community Member" class="position required">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+										
+									</div>
+								</div>
+								<!-- /step-->
+	
+								<div class="submit step" id="end">
+									<div class="summary">
+										<div class="wrapper">
+											<h3 id="check">Thank your for your time<br><span id="name_field"></span>!</h3>
+											<p>We will contat you shorly at the following email address <strong id="email_field"></strong></p>
+										</div>
+										<div class="text-center">
+											<div class="form-group terms">
+												<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a> before Submit
+													<input type="checkbox" name="terms" id="reg" required>
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /step last-->
+	
+							</div>
+
+							<!-- Hidden Form -->
+							
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward" id="prev">Prev</button>
+								<button type="button" name="forward" class="forward" id="next">Next</button>
+								<button type="button" name="process" id="form_submit_btn">Submit</button>
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+				</form>
+	            <!-- /Wizard container -->
+	        </div>
+	        <!-- /content-right-->
+	    </div>
+	    <!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<!-- /menu button -->
+	
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<form action="http://localhost:3000/signup" method="post" enctype="multipart/form-data">
+        
+		<input type="text" name="fullName"  class="hidden_inputs" hidden >
+		<input type="text" name="email"  	class="hidden_inputs" hidden >
+		<input type="text" name="password"  class="hidden_inputs" hidden >
+		<input type="text" name="phone"  	class="hidden_inputs" hidden >
+		<input type="file" name="img"  		class="hidden_inputs" hidden >
+		<input type="text" name="gender"  	class="hidden_inputs" hidden >
+		<input type="text" name="college"   class="hidden_inputs" hidden >
+		<input type="text" name="position"  class="hidden_inputs" hidden >
+		<button type="submit" id="hidden_submit" hidden></button>
+	</form>
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="js/index.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common_scripts.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/common_functions.js"></script>
+	<script src="js/file-validator.js"></script>
+
+	<!-- Wizard script-->
+	<script src="js/func_1.js"></script>
+	<script src="js/new_added.js"></script>
+
+</body>
+</html>

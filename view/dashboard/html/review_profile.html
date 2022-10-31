@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Flatkit - HTML Version | Bootstrap 4 Web App Kit with AngularJS</title>
+  <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular, AngularJS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="../assets/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/material-design-icons/material-design-icons.css" type="text/css" />
+
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- build:css ../assets/styles/app.min.css -->
+  <link rel="stylesheet" href="../assets/styles/app.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/styles/style.css" type="text/css" />
+  <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="../assets/styles/individual_form.css">
+    <title>Profile</title>
+</head>
+<body style="background-color: aliceblue;">
+  <div class="app" id="app">
+
+<!-- ############ LAYOUT START-->
+
+  <!-- aside -->
+  <div id="aside" class="app-aside modal nav-dropdown">
+  	<!-- fluid app aside -->
+    <div class="left navside dark dk" data-layout="column">
+  	  <div class="navbar no-radius">
+        <!-- brand -->
+        <a class="navbar-brand">
+        	<div ui-include="'../assets/images/logo.svg'"></div>
+        	<img src="../assets/images/msu_logo.svg" alt="." id="msu_title_logo"  width="50" height="80">
+        	<span class="hidden-folded inline">MSU</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <div class="hide-scroll" data-flex>
+          <nav class="scroll nav-light">
+            
+            <ul class="nav" ui-nav>
+              <li class="nav-header hidden-folded">
+                <small class="text-muted">Main</small>
+              </li>
+              
+              <li >
+                <a href="/home" >
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe3fc;
+                      <span ui-include="'../assets/images/i_0.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Dashboard</span>
+                </a>
+              </li>
+
+              <!-- Member -->
+              <li class="admin_element">
+                <a href="/members" >
+                  <span class="nav-icon">
+                    <i class="fa fa-users"></i>
+                  </span>
+                  <span class="nav-text">Members</span>
+                </a>
+              </li>
+
+              <!-- Admission  -->
+              <li class="admin_element">
+                <a href="/admission" >
+                  <span class="nav-icon">
+                    <i class="material-icons ">&#xe84f;</i>
+                  </span>
+                  <span class="nav-text">Admission</span>
+                </a>
+              </li>
+              
+
+              
+
+              <li class="admin_element">
+                <a href="/finance" >
+                  <span class="nav-icon">
+                    <i class="material-icons ">&#xe227;</i>
+                  </span>
+                  <span class="nav-text">Finance</span>
+                </a>
+              </li>
+
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  
+                  <span class="nav-icon">
+                    <i class="material-icons ">&#xe878;</i>
+                  </span>
+                  <span class="nav-text">Events</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="/event-table" >
+                      <span class="nav-text">Table</span>
+                    </a>
+                  </li>
+                  <li class="admin_element">
+                    <a href="/event-add" >
+                      <span class="nav-text">Addition</span>
+                    </a>
+                  </li>
+                  <li >
+                    <a href="/event-attendence" >
+                      <span class="nav-text">Attendence</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </li>
+              
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  
+                  <span class="nav-icon">
+                    <i class="material-icons ">&#xe878;</i>
+                  </span>
+                  <span class="nav-text">Projects</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="/project-table" >
+                      <span class="nav-text">Table</span>
+                    </a>
+                  </li>
+                  <li class="admin_element">
+                    <a href="/project-add" >
+                      <span class="nav-text">Addition</span>
+                    </a>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+            </ul>
+          </nav>
+      </div>
+      <div class="b-t">
+        <div class="nav-fold">
+          <!-- UserImage -->
+        	<a href="#">
+        	    <span class="pull-left">
+        	      <img src="../assets/images/a0.jpg" alt="..." class="w-40 img-circle user-image">
+        	    </span>
+        	    <span class="clear hidden-folded p-x" >
+        	      <span class="block _500 userName"  style="padding-left: 4px;">Jean Reyes</span>
+        	      
+        	    </span>
+              
+        	</a>
+          <small class="block text-muted" style="margin-left: 60px;">
+            <i class="fa fa-circle text-success m-r-sm"></i><a href="/logout"  >Log Out?</span>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / -->
+  
+  <!-- content -->
+  <div id="content" class="app-content box-shadow-z0" role="main">
+    <div class="app-header white box-shadow">
+      <div class="navbar navbar-toggleable-sm flex-row align-items-center">
+          <!-- Open side - Naviation on mobile -->
+          <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
+            <i class="material-icons">&#xe5d2;</i>
+          </a>
+          <!-- / -->
+      
+          <!-- Page title - Bind to $state's title -->
+          <div class="mb-0 h5 no-wrap" ng-bind="$state.current.data.title" id="pageTitle"></div>
+      
+          <!-- navbar collapse -->
+          <div class="collapse navbar-collapse" id="collapse">
+            <!-- link and dropdown -->
+            <ul class="nav navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                
+                <a class="nav-link" href data-toggle="dropdown">
+                  <h5 style="font-weight: 395;margin-bottom: 0px;font-family: robot;">Welcome to MSU Admin Portal</h5>
+                </a>
+                
+                <div ui-include="'../views/blocks/dropdown.new.html'"></div>
+              </li>
+              
+              
+            </ul>
+      
+            <!-- / -->
+          </div>
+          <!-- / navbar collapse -->
+      
+          <!-- navbar right -->
+          <!-- User Image -->
+          <ul class="nav navbar-nav ml-auto flex-row">
+            <li class="nav-item dropdown">
+              <a href class="nav-link  text-ellipsis" data-toggle="dropdown" >
+                <span class="avatar w-32">
+                  <img src="../assets/images/a0.jpg" alt="..." class="profile_photo user-image">
+                </span>
+                <span class="hidden-sm-down _500 profile_name userName" >Dean</span>
+              </a>
+              <!-- <div ui-include="'../views/blocks/dropdown.user.html'"></div> -->
+            </li>
+            
+            <!-- <li class="nav-item hidden-md-up">
+              <a class="nav-link pl-2" data-toggle="collapse" data-target="#collapse">
+                <i class="material-icons">&#xe5d4;</i>
+              </a>
+            </li> -->
+          </ul>
+          <!-- / navbar right -->
+      </div>
+    </div>
+    <div class="app-footer">
+      <div class="p-2 text-xs">
+        <div class="pull-right text-muted py-1">
+          &copy; Copyright <strong>All Reserved</strong> <span class="hidden-xs-down">- Built with Love v1.0.0</span>
+          <a ui-scroll-to="content"><i class="fa fa-long-arrow-up p-x-sm"></i></a>
+        </div>
+        <!-- <div class="nav">
+          <a class="nav-link" href="../">About</a>
+          <a class="nav-link" href="http://themeforest.net/user/flatfull/portfolio?ref=flatfull">Get it</a>
+        </div> -->
+      </div>
+    </div>
+    <div ui-view class="app-body" id="view">
+
+<!-- ############ PAGE START-->
+
+  <div class="box">
+    <div class="main">
+      <h4 id="message"  hidden>success</h4>
+
+      <div class="containerr">
+          <div class="img">
+              <img src="https://www.energy.gov/sites/default/files/styles/full_article_width/public/tesla_portrait_0.jpeg?itok=GnME4zta" alt="candidate_img" width="139.1" height="130px" id="candi_img">
+          </div>
+          <form action="">
+          
+              <div class="items">
+                  <h3>Name: </h3>
+                  <div class="form-group">
+                      <input type="text" class="form-control mt-3"  aria-describedby="emailHelp" placeholder="Enter Name" value="John">
+                  </div>
+
+              </div>
+              <div class="items">
+                  <h3>Email:</h3>
+                  <div class="form-group">
+                      <input type="email" class="form-control mt-3"  aria-describedby="emailHelp" placeholder="Enter email" value="John@gmail.com">
+                  </div>
+                  
+              </div>
+              <div class="items">
+                  <h3>Phone:</h3>
+                  <div class="form-group">
+                      <input type="number" class="form-control mt-3"  aria-describedby="emailHelp" placeholder="Enter Phone" value="+1 887978916598">
+                  </div>
+                  
+              </div>
+              <div class="items">
+                  <h3>Postion:</h3>
+                  <div class="form-group">
+                      <input type="text" class="form-control mt-3" id="" aria-describedby="emailHelp" placeholder="Enter Positon" value="Student Advisor">
+                  </div>
+                  
+              </div>
+              <div class="items">
+                  <h3>College:</h3>
+                  <div class="form-group">
+                      <input type="text" class="form-control mt-3" id="" aria-describedby="emailHelp" placeholder="Enter College Name" value="De Anza College">
+                  </div>
+                  
+              </div>
+              <div class="row">
+                  <button type="button"  id="approve" >Approve</button>
+                  <button type="button" id="reject">Reject</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  </div>
+
+
+<!-- ############ PAGE END-->
+
+    </div>
+  </div>
+  <!-- / -->
+
+  <!-- theme switcher -->
+ 
+  <!-- / -->
+
+<!-- ############ LAYOUT END-->
+
+  </div>
+<!-- build:js scripts/app.html.js -->
+<!-- jQuery -->
+<!-- <script src="../html/scripts/reload.js"></script>
+<script src="../html/scripts/individual_form.js"></script> -->
+<script src="../html/scripts/lib/getCookie.js"></script>
+
+<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<!-- build:js scripts/app.html.js -->
+<!-- jQuery -->
+  <script src="../libs/jquery/jquery/dist/jquery.js"></script>
+<!-- Bootstrap -->
+  <script src="../libs/jquery/tether/dist/js/tether.min.js"></script>
+  <script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+  <script src="../libs/jquery/underscore/underscore-min.js"></script>
+  <script src="../libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="../libs/jquery/PACE/pace.min.js"></script>
+
+  <script src="../html/scripts/config.lazyload.js"></script>
+
+  <script src="../html/scripts/palette.js"></script>
+  <script src="../html/scripts/ui-load.js"></script>
+  <script src="../html/scripts/ui-jp.js"></script>
+  <script src="../html/scripts/ui-include.js"></script>
+  <script src="../html/scripts/ui-device.js"></script>
+  <script src="../html/scripts/ui-form.js"></script>
+  <script src="../html/scripts/ui-nav.js"></script>
+  <script src="../html/scripts/ui-screenfull.js"></script>
+  <script src="../html/scripts/ui-scroll-to.js"></script>
+  <script src="../html/scripts/ui-toggle-class.js"></script>
+  <!-- <script>
+    
+      if (window.history) {
+        var myOldUrl = window.location.href;
+        window.addEventListener('hashchange', function(){
+          window.history.pushState({}, null, myOldUrl);
+        });
+      }
+
+      fetch('http://localhost:3000/users').then(data => data.json()).then(data=> data.filter(data=>d.status == 'pending')).then(users =>{
+        table_datas =[]
+        for(let i of users){
+          table_datas.push([i.fullName,i.position,i.createdAt,i.status])
+        }
+        return table_datas;
+
+      }).then(data =>{
+          new gridjs.Grid({
+          columns: ["FullName", "Position", "Since","Status"],
+          pagination:{
+              limit:9,
+          },
+          serach : true,
+
+          sort: true,
+          style: {
+              table:{
+                  'background-color': 'rgba(0, 0, 0, 0.1)',
+                  'width' : '100%'
+              }
+          },
+          language: {
+              'search': {
+                'placeholder': '🔍 Search...'
+              },
+              'pagination': {
+                'previous': '⬅️',
+                'next': '➡️',
+                'showing': '😃 Displaying',
+                'results': () => 'Members'
+              }
+          },
+          resizable:true,
+          search:true,
+          data: data,}).render(document.getElementById("table"));
+      })
+      
+        
+
+  
+  </script> -->
+  <script src="../html/scripts/lib/AdminElementsDeleter.js"></script>
+
+  <script src="../html/scripts/lib/loggedInUser.js"></script>
+  <script src="../html/scripts/lib/userImg.js"></script>
+  <script src="../html/scripts/reload.js" type="text/js"></script>
+  <!-- <script src="../html/scripts/elements.js"></script> -->
+  <!-- <script src="../html/scripts/chart.js"></script> -->
+  <!-- ajax -->
+  <script src="../libs/jquery/jquery-pjax/jquery.pjax.js"></script>
+  <script src="../html/scripts/ajax.js" type="text/js"></script>
+  <script src="../html/scripts/lib/profile.js"></script>
+  <script src="../html/scripts/lib/param_getter.js"></script>
+  <script src="../html/scripts/review-profile-api.js"></script>
+
+
+
+<!-- endbuild -->
+</body>
+</html>
